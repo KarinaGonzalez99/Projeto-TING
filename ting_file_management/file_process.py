@@ -41,7 +41,9 @@ def file_metadata(instance, position):
     try:
         # Busca as informações do arquivo na posição solicitada
         metadatafile = instance.search(position)
+
         print(metadatafile)
+
     except IndexError:
         # Caso a posição solicitada não exista na fila, retorna um erro
         print("Posição inválida", file=sys.stderr)
